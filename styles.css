@@ -252,7 +252,6 @@ body.intro-active {
     gap: 1rem;
 }
 
-/* ============ PIXIS.AI STYLE CTA BUTTON ============ */
 .btn-demo {
     position: relative;
     display: inline-flex;
@@ -270,7 +269,6 @@ body.intro-active {
 }
 
 .btn-demo:hover {
-    transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(61, 52, 40, 0.25);
 }
 
@@ -933,7 +931,6 @@ body.intro-active {
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
