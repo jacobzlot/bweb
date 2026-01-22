@@ -11,6 +11,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&display=swap"
     rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="BreezWebLogo.png">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -24,7 +27,7 @@
   <div id="mainSiteWrapper">
     <header class="header" id="header">
       <div class="header-inner">
-        <a href="#" class="logo">
+        <a href="breezhome.html" class="logo">
           <img src="BreezAI_Logo_TransparentBG.png" alt="Breez AI">
         </a>
 
@@ -38,15 +41,28 @@
             </a>
             <div class="nav-dropdown-menu">
               <div class="nav-dropdown-content">
-                <a href="#">SmartMeals</a>
-                <a href="#">AisleMate</a>
+                <a href="smartmeals.html">SmartMeals</a>
+                <a href="aislemate.html">Aisle Mate</a>
               </div>
             </div>
           </div>
 
-          <a href="#" class="nav-link">Why Breez</a>
-          <a href="#" class="nav-link">About Us</a>
-          <a href="#" class="nav-link">Contact Us</a>
+          <a href="whybreez.html" class="nav-link">Why Breez</a>
+          <div class="nav-dropdown">
+            <a class="nav-link nav-dropdown-trigger">
+              About Us
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <div class="nav-dropdown-content">
+                <a href="ourstory.html">Our Story</a>
+                <a href="ourteam.html">Our Team</a>
+              </div>
+            </div>
+          </div>
+          <a href="contactus.html" class="nav-link">Contact Us</a>
         </nav>
 
         <div class="header-actions">
@@ -90,11 +106,16 @@
 
     <section class="products">
       <div class="products-grid">
-        <div class="product-card product-card-smartmeals reveal">
+
+        <div class="product-card product-card-smartmeals reveal" data-href="SMARTMEALS_PAGE_URL" role="link"
+          tabindex="0" aria-label="Learn more about SmartMeals">
           <h2 class="product-card-title">SmartMeals</h2>
           <p class="product-card-desc">
             Your AI-powered meal planning companion that transforms how people plan, shop, and cook.
           </p>
+
+          <span class="product-card-link" aria-hidden="true">Learn more</span>
+
           <div class="product-card-pattern">
             <svg viewBox="0 0 60 60" fill="none">
               <circle cx="30" cy="30" r="2" fill="currentColor" opacity="0.3" />
@@ -105,15 +126,20 @@
           </div>
         </div>
 
-        <div class="product-card product-card-aislemate reveal delay-1">
+        <div class="product-card product-card-aislemate reveal delay-1" data-href="AISLEMATE_PAGE_URL" role="link"
+          tabindex="0" aria-label="Learn more about Aisle Mate">
           <span class="product-card-badge">Coming Q2 2026</span>
-          <h2 class="product-card-title"><span class="ai-accent">Ai</span>sleMate</h2>
+          <h2 class="product-card-title"><span class="ai-accent">Ai</span>sle Mate</h2>
           <p class="product-card-desc">
             Your intelligent shopping assistant that builds baskets faster and surfaces deals at your fingertips.
           </p>
+
+          <span class="product-card-link" aria-hidden="true">Learn more</span>
         </div>
+
       </div>
     </section>
+
 
     <section class="stats">
       <div class="stats-inner">
@@ -302,29 +328,27 @@
           <div class="footer-column">
             <h4>Products</h4>
             <ul>
-              <li><a href="#">SmartMeals</a></li>
-              <li><a href="#">AisleMate</a></li>
+              <li><a href="smartmeals.html">SmartMeals</a></li>
+              <li><a href="aislemate.html">Aisle Mate</a></li>
             </ul>
           </div>
 
           <div class="footer-column">
             <h4>Company</h4>
             <ul>
-              <li><a href="#">Our Story</a></li>
-              <li><a href="#">Our Team</a></li>
-              <li><a href="#">Mission & Values</a></li>
-              <li><a href="#">News</a></li>
+              <li><a href="ourstory.html">Our Story</a></li>
+              <li><a href="ourteam.html">Our Team</a></li>
             </ul>
           </div>
 
           <div class="footer-column">
             <h4>Resources</h4>
             <ul>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Book a Demo</a></li>
-              <li><a href="#">Terms and Conditions</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contactus.html">Contact</a></li>
+              <li><a href="bookdemo.html">Book a Demo</a></li>
+              <li><a href="termsandconditions.html">Terms and Conditions</a></li>
+              <li><a href="privacypolicy.html">Privacy Policy</a></li>
             </ul>
           </div>
         </div>
@@ -460,6 +484,21 @@
       setTimeout(() => heroLine2.classList.add('visible'), 200);
       setTimeout(() => heroSubtitle.classList.add('visible'), 400);
     }, TOTAL_INTRO_TIME);
+
+    document.querySelectorAll('.product-card[data-href]').forEach((card) => {
+      const url = card.dataset.href;
+
+      card.addEventListener('click', () => {
+        window.location.href = url;
+      });
+
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          window.location.href = url;
+        }
+      });
+    });
   </script>
 </body>
 
