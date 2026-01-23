@@ -493,12 +493,10 @@ body.intro-active {
 
 .product-card-smartmeals,
 .product-card-aislemate {
-    background: linear-gradient(
-        135deg,
-        #ffffff 0%,
-        #f1f4f8 55%,
-        #e3e9f1 100%
-    );
+    background:
+        radial-gradient(circle at 18% 28%, rgba(255, 140, 80, 0.22) 0%, transparent 46%),
+        radial-gradient(circle at 82% 70%, rgba(60, 120, 255, 0.16) 0%, transparent 46%),
+        radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.55) 0%, transparent 60%);
 }
 
 .product-card-aislemate .product-card-title .ai-accent {
@@ -507,8 +505,8 @@ body.intro-active {
 
     background: linear-gradient(
         180deg,
-        #ff9a3c 0%,
-        #ff6a2a 100%
+        #C41E3A 0%,
+        #14407A 100%
     );
     -webkit-background-clip: text;
     background-clip: text;
@@ -547,9 +545,9 @@ body.intro-active {
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
-    background: rgba(51, 69, 123, 0.10);
-    color: #33457b;
-    border: 1px solid rgba(51, 69, 123, 0.22);
+    background: #f07a8e16;
+    color: #9B1B30;
+    border: 1px solid #9d09227c;
 
     box-shadow: none;
 }
@@ -559,8 +557,8 @@ body.intro-active {
     width: 8px;
     height: 8px;
     border-radius: 999px;
-    background: linear-gradient(180deg, #ff9a3c 0%, #ff6a2a 100%);
-    box-shadow: 0 0 0 3px rgba(255, 138, 60, 0.18);
+    background: linear-gradient(180deg, #ff8095 0%, #5d0110 100%);
+    box-shadow: 0 0 0 3px #ff8c9f7a;
 }
 
 .product-card-badge::after {
@@ -582,7 +580,7 @@ body.intro-active {
 }
 
 .product-card-aislemate:hover .product-card-badge {
-    border-color: rgba(255, 138, 60, 0.65);
+    border-color: #9d0922;
 }
 
 .product-card-pattern {
