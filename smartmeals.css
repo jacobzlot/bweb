@@ -330,14 +330,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 450px;
+    min-height: 550px;
+    height: 70vh;
+    max-height: 650px;
 }
 
 .scroll-showcase .hero-image-container {
     position: relative;
     width: 100%;
     height: 100%;
-    min-height: 400px;
+    min-height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -378,7 +380,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    min-height: 400px;
+    min-height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -392,6 +394,10 @@
     left: 50%;
     transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform, opacity;
+    background: none !important;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2), 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .hero-shot.device:not(.active) {
@@ -412,31 +418,50 @@
     transform: translate(-50%, -50%) scale(1) rotateY(0) rotateX(0) !important;
 }
 
-/* Phone device */
+/* Ensure images fill container completely */
+.scroll-showcase .hero-shot-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block;
+}
+
+/* Phone device - tall and narrow */
 .scroll-showcase .hero-shot--phone {
     width: auto;
-    height: 80%;
-    max-height: 420px;
-    aspect-ratio: 9/19;
+    height: 85%;
+    max-height: 520px;
+    min-height: 400px;
+    aspect-ratio: 9/19.5;
     z-index: 3;
+    border-radius: 24px;
 }
 
-/* Tablet device */
+/* Remove the border overlay on phone in scroll showcase */
+.scroll-showcase .hero-shot--phone::after {
+    display: none;
+}
+
+/* Tablet device - more square */
 .scroll-showcase .hero-shot--tablet {
     width: auto;
-    height: 75%;
-    max-height: 380px;
-    aspect-ratio: 4/3;
+    height: 80%;
+    max-height: 500px;
+    min-height: 380px;
+    aspect-ratio: 3/4;
     z-index: 2;
+    border-radius: 16px;
 }
 
-/* Desktop device */
+/* Desktop device - wide */
 .scroll-showcase .hero-shot--desktop {
-    width: 90%;
-    max-width: 480px;
+    width: 95%;
+    max-width: 600px;
+    min-width: 450px;
     height: auto;
     aspect-ratio: 16/10;
     z-index: 1;
+    border-radius: 8px;
 }
 
 /* Device glows */
@@ -1410,7 +1435,7 @@
         width: 100%;
         max-width: 300px;
         height: auto;
-        aspect-ratio: 3/5;
+        aspect-ratio: 9/16;
         transform: none;
         border-radius: 1rem;
     }
@@ -1545,14 +1570,19 @@
 /* Large screens */
 @media (max-width: 1200px) {
     .scroll-showcase .scroll-showcase__track {
-        height: 225vh;
+        height: 240vh;
+    }
+    
+    .scroll-showcase .hero-shot--desktop {
+        max-width: 520px;
+        min-width: 380px;
     }
 }
 
 /* Tablet screens */
 @media (max-width: 1000px) {
     .scroll-showcase .scroll-showcase__track {
-        height: 210vh;
+        height: 220vh;
     }
 
     .stage-progress {
@@ -1568,7 +1598,27 @@
     }
     
     .scroll-showcase .hero-image-stack {
-        min-height: 300px;
+        min-height: 400px;
+    }
+    
+    .scroll-showcase .hero-visual {
+        min-height: 450px;
+        height: 60vh;
+    }
+    
+    .scroll-showcase .hero-shot--phone {
+        max-height: 450px;
+        min-height: 350px;
+    }
+    
+    .scroll-showcase .hero-shot--tablet {
+        max-height: 420px;
+        min-height: 320px;
+    }
+    
+    .scroll-showcase .hero-shot--desktop {
+        max-width: 450px;
+        min-width: 320px;
     }
 }
 
@@ -1596,16 +1646,24 @@
         min-height: 90px;
     }
     
+    .scroll-showcase .hero-visual {
+        min-height: 380px;
+        height: 50vh;
+    }
+    
     .scroll-showcase .hero-shot--phone {
-        max-height: 320px;
+        max-height: 380px;
+        min-height: 300px;
     }
     
     .scroll-showcase .hero-shot--tablet {
-        max-height: 280px;
+        max-height: 340px;
+        min-height: 260px;
     }
     
     .scroll-showcase .hero-shot--desktop {
-        max-width: 360px;
+        max-width: 380px;
+        min-width: 280px;
     }
 }
 
@@ -1618,12 +1676,32 @@
     .showcase-dynamic {
         min-height: 100px;
     }
+    
+    .scroll-showcase .hero-visual {
+        min-height: 320px;
+        height: 45vh;
+    }
+    
+    .scroll-showcase .hero-shot--phone {
+        max-height: 320px;
+        min-height: 250px;
+    }
+    
+    .scroll-showcase .hero-shot--tablet {
+        max-height: 280px;
+        min-height: 220px;
+    }
+    
+    .scroll-showcase .hero-shot--desktop {
+        max-width: 320px;
+        min-width: 240px;
+    }
 }
 
 /* Extra small screens */
 @media (max-width: 480px) {
     .scroll-showcase .scroll-showcase__track {
-        height: 150vh;
+        height: 160vh;
     }
 
     .progress-dot {
@@ -1638,5 +1716,28 @@
 
     .showcase-dynamic {
         min-height: 120px;
+    }
+    
+    .scroll-showcase .hero-visual {
+        min-height: 280px;
+        height: 40vh;
+    }
+    
+    .scroll-showcase .hero-shot--phone {
+        max-height: 280px;
+        min-height: 220px;
+        border-radius: 16px;
+    }
+    
+    .scroll-showcase .hero-shot--tablet {
+        max-height: 240px;
+        min-height: 180px;
+        border-radius: 12px;
+    }
+    
+    .scroll-showcase .hero-shot--desktop {
+        max-width: 280px;
+        min-width: 220px;
+        border-radius: 6px;
     }
 }
