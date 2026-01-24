@@ -60,7 +60,7 @@
 /* ---------- MAIN SECTION ---------- */
 .terms-section {
   padding: 5rem 2rem 6rem;
-  background: var(--white);
+  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
 }
 
 .terms-container {
@@ -75,7 +75,7 @@
   justify-content: center;
   margin-bottom: 3rem;
   padding: 1.5rem 2rem;
-  background: var(--cream);
+  background: var(--cream-dark);
   border-radius: 16px;
 }
 
@@ -119,9 +119,6 @@
 }
 
 /* ---------- CONTENT ---------- */
-.terms-content {
-  background: var(--white);
-}
 
 .terms-intro {
   font-size: 1.05rem;
@@ -129,7 +126,7 @@
   line-height: 1.8;
   margin-bottom: 2.5rem;
   padding: 2rem;
-  background: var(--cream);
+  background: var(--cream-dark);
   border-radius: 16px;
   border-left: 4px solid var(--orange);
 }
@@ -231,7 +228,6 @@
 /* ---------- TABLE (PRIVACY-SPECIFIC) ---------- */
 .legal-table-wrap {
   margin-top: 1.5rem;
-  background: var(--cream);
   border-radius: 16px;
   padding: 1rem;
   overflow: auto;
@@ -242,7 +238,7 @@
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  min-width: 900px; /* enables horizontal scroll on small screens */
+  min-width: 600px; /* enables horizontal scroll on small screens */
   background: var(--white);
   border-radius: 12px;
   overflow: hidden;
@@ -282,7 +278,7 @@
 .terms-footer {
   margin-top: 4rem;
   padding: 2.5rem;
-  background: linear-gradient(135deg, var(--peach) 0%, var(--cream-dark) 100%);
+  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
   border-radius: 20px;
 }
 
@@ -333,14 +329,14 @@
 }
 
 .terms-footer-content a {
-    color: var(--orange-dark);
+    color: var(--text-primary);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.2s ease;
 }
 
 .terms-footer-content a:hover {
-    color: var(--orange);
+    color: var(--white);
 }
 
 /* ---------- RESPONSIVE ---------- */

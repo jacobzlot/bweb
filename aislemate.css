@@ -79,7 +79,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(ellipse at 50% 0%, rgba(245, 166, 35, 0.08) 0%, transparent 70%);
+    background: var(--cream);
+    z-index: -2;
     pointer-events: none;
 }
 

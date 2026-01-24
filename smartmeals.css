@@ -1269,7 +1269,7 @@
 }
 
 .cta-section .btn-demo .btn-demo-bg {
-    background: linear-gradient(135deg, var(--orange-dark) 0%, var(--orange) 100%);
+    background: linear-gradient(135deg, var(--sm-red-dark) 0%, var(--sm-red) 100%);
 }
 
 .cta-section .btn-demo .btn-demo-spotlight {
