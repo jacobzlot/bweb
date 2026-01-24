@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aisle Mate | Breez AI - Your Intelligent Shopping Assistant</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="BreezWebLogo.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="aislemate.css">
+</head>
+
+<body>
+    <!-- Under Construction Banner -->
+    <div class="construction-banner">
+        <div class="construction-banner-inner">
+            <span class="construction-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                    </path>
+                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+            </span>
+            <span class="construction-text">
+                <strong>Coming Q2 2026</strong> — Aisle Mate is currently under construction. Stay tuned for launch!
+            </span>
+        </div>
+    </div>
+
+    <header class="header visible" id="header">
+        <div class="header-inner">
+            <a href="breezhome.html" class="logo">
+                <img src="BreezAI_Logo_TransparentBG.png" alt="Breez AI">
+            </a>
+
+            <nav class="nav">
+                <div class="nav-dropdown">
+                    <a class="nav-link nav-dropdown-trigger">
+                        Products
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <div class="nav-dropdown-content">
+                            <a href="smartmeals.html">SmartMeals</a>
+                            <a href="aislemate.html">Aisle Mate</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="whybreez.html" class="nav-link">Why Breez</a>
+                <div class="nav-dropdown">
+                    <a class="nav-link nav-dropdown-trigger">
+                        About Us
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <div class="nav-dropdown-content">
+                            <a href="ourstory.html">Our Story</a>
+                            <a href="ourteam.html">Our Team</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="contactus.html" class="nav-link">Contact Us</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="bookdemo.html" class="btn-demo">
+                    <span class="btn-demo-bg"></span>
+                    <span class="btn-demo-spotlight"></span>
+                    <span class="btn-demo-content">
+                        <span class="btn-demo-icon">
+                            <svg id="tap" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.7414 12.6903C19.6452 15.1301 18.7559 18.3585 17.1721 19.9423C15.1512 21.9632 9.50358 22.1168 7.65461 19.8175C6.48129 18.3585 5.56933 16.5877 4.99449 15.001C4.68618 14.15 5.13859 13.2323 5.98366 12.9082C6.73171 12.6212 7.57895 12.8838 8.03363 13.5435L9.16905 15.1908V6.08708C9.16905 5.21056 9.87961 4.5 10.7561 4.5C11.6231 4.5 12.3297 5.19579 12.343 6.06271L12.4061 10.1687C14.6272 10.3808 17.8433 10.2662 18.7414 12.6903Z"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path
+                                    d="M9.01733 9.5C7.93016 8.86052 7.19531 7.63895 7.19531 6.23711C7.19531 4.17316 8.78825 2.5 10.7532 2.5C12.7182 2.5 14.3112 4.17316 14.3112 6.23711C14.3112 7.61658 13.5996 8.82148 12.5409 9.46894"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                        <span class="btn-demo-text">Get a demo</span>
+                    </span>
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="aislemate-hero">
+        <div class="aislemate-hero-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            Launching Q2 2026
+        </div>
+
+        <h1 class="aislemate-hero-title">
+            <span class="ai-accent">Ai</span>sle Mate
+        </h1>
+
+        <p class="aislemate-hero-subtitle">
+            Your intelligent shopping assistant that learns your household, builds baskets faster,
+            and turns ideas into cart without ever leaving the page.
+        </p>
+
+        <div class="aislemate-hero-visual">
+            <div class="hero-mockup-container">
+                <div class="hero-mockup-header">
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                </div>
+                <div class="hero-mockup-content">
+                    <img src="aislemate_mockup.png" alt="Aisle Mate Concept Mockup">
+                </div>
+            </div>
+            <p class="mockup-disclaimer">
+                <!--?xml version="1.0" encoding="UTF-8"?-->
+                <svg id="Danger" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>Iconly/Light/Danger Circle</title>
+                    <g id="Iconly/Light/Danger-Circle" stroke="none" stroke-width="1.5" fill="none" fill-rule="evenodd"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Danger-Circle" transform="translate(2.000000, 2.000000)" stroke=currentColor>
+                            <path
+                                d="M10.0001,0.7501 C15.1081,0.7501 19.2501,4.8911 19.2501,10.0001 C19.2501,15.1081 15.1081,19.2501 10.0001,19.2501 C4.8911,19.2501 0.7501,15.1081 0.7501,10.0001 C0.7501,4.8911 4.8911,0.7501 10.0001,0.7501 Z"
+                                id="Stroke-1" stroke-width="1.5"></path>
+                            <line x1="9.9952" y1="6.2042" x2="9.9952" y2="10.6232" id="Stroke-3" stroke-width="1.5">
+                            </line>
+                            <line x1="9.995" y1="13.7961" x2="10.005" y2="13.7961" id="Stroke-5" stroke-width="1.5">
+                            </line>
+                        </g>
+                    </g>
+                </svg>
+                This is an early concept mockup. <a href="contactus.html">Contact us</a> for up-to-date, accurate
+                product information.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Intro Section -->
+    <section class="aislemate-intro">
+        <div class="aislemate-intro-inner">
+            <div class="aislemate-intro-header reveal">
+                <h2>Smart Shopping, Simplified</h2>
+                <p>Aisle Mate transforms the online grocery experience with AI that truly understands your needs.</p>
+            </div>
+
+            <div class="aislemate-features-grid">
+                <div class="aislemate-feature-card reveal">
+                    <div class="feature-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3>Learns Your Household</h3>
+                    <p>Suggests the right items and builds baskets faster on every page by remembering your preferences,
+                        dietary needs, and shopping patterns.</p>
+                </div>
+
+                <div class="aislemate-feature-card reveal delay-1">
+                    <div class="feature-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </div>
+                    <h3>Answers & Finds</h3>
+                    <p>Ask questions, find products, and turn ideas into items in your cart—all without leaving the page
+                        you're on.</p>
+                </div>
+
+                <div class="aislemate-feature-card reveal delay-2">
+                    <div class="feature-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Surfaces Deals</h3>
+                    <p>Automatically highlights weekly ad deals and private label options, growing baskets and
+                        encouraging repeat shopping.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="aislemate-vision">
+        <div class="aislemate-vision-inner">
+            <div class="aislemate-vision-header reveal">
+                <span class="vision-label">The Vision</span>
+                <h2>Agentic Grocery, Powered by <span>AI</span></h2>
+            </div>
+
+            <div class="vision-columns">
+                <div class="vision-column reveal">
+                    <div class="vision-column-title">
+                        <svg id="3 user" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M23.3466 16.5689C22.6166 14.2829 20.6816 12.9749 18.0266 12.9749H18.0076C16.9256 12.9649 15.9586 13.1829 15.1426 13.5999C17.4196 14.3309 19.1076 15.9529 19.8846 18.2479C21.1176 18.0769 22.1896 17.6979 23.1376 17.1189L23.4506 16.9199L23.3466 16.5689Z"
+                                fill=currentColor></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.2905 11.2484C16.8025 11.5334 17.3815 11.6944 18.0075 11.6944C19.9705 11.6944 21.5635 10.1004 21.5635 8.13738C21.5635 6.18438 19.9705 4.59038 18.0075 4.59038C17.6185 4.59038 17.2485 4.65738 16.8975 4.77038C17.4095 5.59638 17.7035 6.57238 17.7035 7.60638C17.7035 9.01038 17.1815 10.2814 16.2905 11.2484Z"
+                                fill=currentColor></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M9.31032 13.5815C8.51332 13.1835 7.57432 12.9745 6.51232 12.9745H6.47432C3.81932 12.9745 1.88432 14.2835 1.16332 16.5685L1.04932 16.9195L1.36232 17.1185C2.26332 17.6695 3.32632 18.0385 4.51132 18.2285C5.29832 15.9245 7.01532 14.2925 9.31032 13.5815Z"
+                                fill=currentColor></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M6.49346 11.6941C7.11946 11.6941 7.69746 11.5331 8.21046 11.2481C7.31846 10.2811 6.79646 9.01007 6.79646 7.60607C6.79646 6.57307 7.09046 5.59607 7.60346 4.77107C7.25246 4.65707 6.88246 4.59007 6.49346 4.59007C4.53046 4.59007 2.93646 6.18407 2.93646 8.13707C2.93646 10.1011 4.53046 11.6941 6.49346 11.6941Z"
+                                fill=currentColor></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12.216 14.1034C12.2 14.1034 12.185 14.1034 12.17 14.1034C8.756 14.1034 6.267 15.7814 5.341 18.7104L5.229 19.0644L5.546 19.2584C7.354 20.3604 9.514 20.8964 12.149 20.8964H12.234C14.871 20.8964 17.032 20.3604 18.84 19.2584L19.158 19.0644L19.046 18.7104C18.119 15.7814 15.631 14.1034 12.216 14.1034Z"
+                                fill=currentColor></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12.2502 12.1186C14.7362 12.1186 16.7582 10.0966 16.7582 7.61058C16.7582 5.12558 14.7362 3.10358 12.2502 3.10358C9.76419 3.10358 7.74219 5.12558 7.74219 7.61058C7.74219 10.0966 9.76419 12.1186 12.2502 12.1186Z"
+                                fill=currentColor></path>
+                        </svg>
+                        What Your Shoppers Will Get
+                    </div>
+
+                    <div class="vision-item">
+                        <h4>Personalization</h4>
+                        <p>Remembers pantry, preferences and health goals to tailor every trip.</p>
+                    </div>
+
+                    <div class="vision-item">
+                        <h4>Savings That Matter</h4>
+                        <p>Personalized on-ad flags and coupon-eligible picks applied directly to cart.</p>
+                    </div>
+
+                    <div class="vision-item">
+                        <h4>Faster Trips</h4>
+                        <p>Ask from any page and jump straight to shoppable actions with fewer clicks.</p>
+                    </div>
+                </div>
+
+                <div class="vision-column reveal delay-1">
+                    <div class="vision-column-title">
+                        <svg id="Store" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.7925 10.5035C4.55531 11.2255 5.68784 11.4026 6.69584 11.1068L6.96924 11.026C7.41194 10.8966 7.88675 10.9317 8.30416 11.1253L10.4894 12.1381C11.4478 12.5818 12.5531 12.5818 13.5105 12.1381L15.6958 11.1253C16.1142 10.9317 16.588 10.8966 17.0307 11.026L17.3041 11.1068C18.3121 11.4026 19.4456 11.2255 20.2084 10.5035C20.7572 9.98398 21.089 9.27371 20.979 8.51091C20.8623 7.69945 20.4711 6.42292 20.1306 5.40422C19.8115 4.44876 18.9183 3.8066 17.9112 3.8066H6.07606C5.06514 3.8066 4.16807 4.4546 3.85282 5.41589C3.5191 6.43265 3.13769 7.70334 3.02094 8.51091C2.91099 9.27371 3.24374 9.98398 3.7925 10.5035Z"
+                                stroke=currentColor stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path d="M7.4834 10.9364L8.22967 7.99023" stroke=currentColor stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M16.5158 10.9364L15.7695 7.99023" stroke=currentColor stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path
+                                d="M19.4605 11.0508V16.0265C19.4605 18.4677 17.9398 20.1928 15.4957 20.1928H8.50391C6.05884 20.1928 4.53809 18.4677 4.53809 16.0265V11.0508"
+                                stroke=currentColor stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path
+                                d="M9.60059 20.1933V17.3348C9.60059 16.356 10.3945 15.561 11.3743 15.561H12.6898C13.6335 15.561 14.3983 16.3268 14.3983 17.2705V20.1933"
+                                stroke=currentColor stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg>
+
+                        What You Gain
+                    </div>
+
+                    <div class="vision-item">
+                        <h4>Bigger Baskets</h4>
+                        <p>Smart meal planning, auto bundles and smart swaps add items organically.</p>
+                    </div>
+
+                    <div class="vision-item">
+                        <h4>New Revenue</h4>
+                        <p>Sponsored ingredients and recipes, shoppable video and retail media opportunities.</p>
+                    </div>
+
+                    <div class="vision-item">
+                        <h4>Fit and Speed</h4>
+                        <p>Lives inside your ecommerce, integrates with fulfillment solutions and scales in 60 to 90
+                            days.</p>
+                    </div>
+
+                    <div class="vision-item">
+                        <h4>Engagement Engine</h4>
+                        <p>Shareable recipes, staff and influencer deep links, light gamification to bring them back.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="aislemate-timeline">
+        <div class="aislemate-timeline-inner">
+            <div class="aislemate-timeline-header reveal">
+                <h2>Development Roadmap</h2>
+                <p>Follow our journey as we build the future of grocery shopping.</p>
+            </div>
+
+            <div class="timeline-track reveal">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Q4 2025</div>
+                        <div class="timeline-title">Project Vision & Foundation</div>
+                        <div class="timeline-desc">Define the product vision and roadmap while establishing the core
+                            platform foundation for AI-driven personalization and retailer enablement.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item active">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Q1 2026</div>
+                        <div class="timeline-title">Architecture, Key Integrations, & Beta Testing</div>
+                        <div class="timeline-desc">Build the production architecture and deliver key
+                            integrations—including eCommerce and RMN—while launching a private beta with select retail
+                            partners to validate performance and user workflows.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item upcoming">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Q2 2026</div>
+                        <div class="timeline-title">Public Launch</div>
+                        <div class="timeline-desc">Aisle Mate goes live with full feature set including chat, weekly ad
+                            integration, and recipe suggestions.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item upcoming">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Q3 2026</div>
+                        <div class="timeline-title">Advanced Features</div>
+                        <div class="timeline-desc">Expand the platform with additional capabilities and enhancements
+                            based on beta learnings and partner feedback.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notify CTA Section -->
+    <section class="aislemate-notify">
+        <div class="aislemate-notify-inner">
+            <h2>Be the First to Know</h2>
+            <p>Interested in bringing Aisle Mate to your grocery platform? Let's talk about what's possible.</p>
+            <div class="notify-cta">
+                <a href="bookdemo.html" class="btn-primary">
+                    <span class="btn-primary-bg"></span>
+                    <span class="btn-primary-spotlight"></span>
+                    <span class="btn-primary-content">
+                        <span class="btn-primary-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.7414 12.6903C19.6452 15.1301 18.7559 18.3585 17.1721 19.9423C15.1512 21.9632 9.50358 22.1168 7.65461 19.8175C6.48129 18.3585 5.56933 16.5877 4.99449 15.001C4.68618 14.15 5.13859 13.2323 5.98366 12.9082C6.73171 12.6212 7.57895 12.8838 8.03363 13.5435L9.16905 15.1908V6.08708C9.16905 5.21056 9.87961 4.5 10.7561 4.5C11.6231 4.5 12.3297 5.19579 12.343 6.06271L12.4061 10.1687C14.6272 10.3808 17.8433 10.2662 18.7414 12.6903Z"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path
+                                    d="M9.01733 9.5C7.93016 8.86052 7.19531 7.63895 7.19531 6.23711C7.19531 4.17316 8.78825 2.5 10.7532 2.5C12.7182 2.5 14.3112 4.17316 14.3112 6.23711C14.3112 7.61658 13.5996 8.82148 12.5409 9.46894"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                        <span class="btn-primary-text">Schedule a Demo</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="BreezAI_Logo_TransparentBG.png" alt="Breez AI">
+                    </a>
+                    <p>Personalized Grocery. Powered by AI. Making shopping feel as easy and inspiring as it should be.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="smartmeals.html">SmartMeals</a></li>
+                        <li><a href="aislemate.html">Aisle Mate</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="ourstory.html">Our Story</a></li>
+                        <li><a href="ourteam.html">Our Team</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                        <li><a href="bookdemo.html">Book a Demo</a></li>
+                        <li><a href="termsandconditions.html">Terms and Conditions</a></li>
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    © 2026 Breez AI, LLC. All rights reserved.
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/breez-ai" target="_blank" aria-label="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/MyBreezAI" target="_blank" aria-label="Twitter">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll handling
+        const header = document.getElementById('header');
+
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+
+            // Header shadow
+            if (scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Reveal on scroll
+        const reveals = document.querySelectorAll('.reveal');
+
+        const revealOnScroll = () => {
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
+</body>
+
+</html>
